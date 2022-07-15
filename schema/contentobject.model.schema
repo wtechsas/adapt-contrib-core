@@ -7,7 +7,8 @@
     "title": {
       "type": "string",
       "required": true,
-      "default": "New Menu/Page Title",
+      "default": "Nombre de la página/menú",
+      "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
       "translatable": true
@@ -15,19 +16,21 @@
     "displayTitle": {
       "type": "string",
       "required": false,
-      "default": "New Menu/Page Title",
+      "default": "Título de la página/menú",
+      "title": "Mostrar título",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "When viewing a menu/page - this is the title that will be displayed on the menu/page",
+      "help": "Cuando se muestre la página, este será su título",
       "translatable": true
     },
     "subtitle": {
       "type": "string",
       "required": false,
+      "title": "Subtítulo",
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "When viewing a menu/page - this is the subtitle that will be displayed on the menu/page",
+      "help": "Cuando se muestre la página, este será su subtítulo",
       "translatable": true
     },
     "pageBody":{
@@ -35,12 +38,14 @@
       "default" : "",
       "inputType": "TextArea",
       "validators": [],
+      "title": "Contenido de la página",
       "translatable": true,
-      "help": "If set, this text will be shown instead of the body text when this page is viewed."
+      "help": "Si se establece, este texto se mostrará en lugar del texto del indice del curso cuando se vea esta página."
     },
     "body":{
       "type": "string",
       "default" : "",
+      "title": "Indice",
       "inputType": "TextArea",
       "validators": [],
       "translatable": true
@@ -48,7 +53,7 @@
     "instruction": {
       "type": "string",
       "required": false,
-      "title": "Instruction text",
+      "title": "Texto de instrucciones",
       "default": "",
       "inputType": "Text",
       "validators": [],
@@ -57,41 +62,42 @@
     "_htmlClasses": {
       "type": "string",
       "required": false,
-      "title": "HTML Classes",
+      "title": "Clases HTML",
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code."
+      "help": "Si se configura, esta clase o clases de CSS se aplicarán al elemento <html> siempre que esta sea la página activa del curso. Estos están predefinidos en el tema o se agregan en Configuración del proyecto > CSS personalizado/código LESS."
     },
     "_graphic": {
       "type": "object",
-      "title": "",
+      "title": "Gráfico",
       "properties": {
         "alt": {
           "type": "string",
           "required": false,
-          "title": "Alternative text",
+          "title": "Texto alternativo",
           "default": "",
           "inputType": "Text",
           "validators": [],
-          "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+          "help": "Incluye una descripción de la imagen; requerido cuando se tiene un significado que debe transmitirse al alumno. Para una imagen 'decorativa' deje este espacio en blanco.",
           "translatable": true
         },
         "src": {
           "type": "string",
           "required": false,
           "default": "",
+          "title": "Cargar imagen",
           "inputType": "Asset:image",
           "validators": [],
-          "help": "This is the link to the image."
+          "help": "Seleccione su recurso o una url"
         }
       }
     },
     "linkText": {
       "type": "string",
       "required": false,
-      "title": "Button link text",
-      "default": "View",
+      "title": "Texto del botón para abrir un curso",
+      "default": "Ver",
       "inputType": "Text",
       "validators" : ["required"],
       "translatable": true
@@ -99,21 +105,21 @@
     "duration": {
       "type": "string",
       "required": false,
-      "title": "Duration",
+      "title": "Duración",
       "default": "",
       "inputType": "Text",
       "validators" : [""],
-      "help": "Indicates how long this page or section should take to complete",
+      "help": "Indica cuánto tiempo debe tardar en completarse esta página o sección",
       "translatable": true
     },
     "_lockedBy": {
       "type": "array",
       "required": false,
       "default": [],
-      "title": "Locked by",
+      "title": "Bloqueado por",
       "inputType": "List",
       "validators": [],
-      "help": "If the course is using a 'custom' Menu Lock Type, this should contain the unique ID of the item(s) which must be completed before this is unlocked"
+      "help": "Si el curso utiliza un tipo de bloqueo de menú 'personalizado', este debe contener la identificación única de los elementos que deben completarse antes de que se desbloquee."
     },
     "_lockType": {
       "type": "string",
@@ -121,15 +127,15 @@
       "inputType": {
         "type": "Select",
         "options": [
-          "",
-          "custom",
-          "lockLast",
-          "sequential",
-          "unlockFirst"
+          {"val":"", "label":""},
+          {"val":"custom", "label":"personalizado"},
+          {"val":"lockLast", "label":"bloquear el último"},
+          {"val":"sequential", "label":"secuencial"},
+          {"val":"unlockFirst", "label":"desbloquear el primero"}
         ]
       },
-      "title": "Menu lock type",
-      "help": "Defines which (if any) locking mechanism will be used. To be used only on submenus.",
+      "title": "Tipo de bloqueo de menú",
+      "help": "Define qué mecanismo de bloqueo (si lo hay) se utilizará. Para ser utilizado sólo en los submenús.",
       "validators": []
     },
     "_classes": {
@@ -138,8 +144,8 @@
       "isSetting": true,
       "inputType": "Text",
       "validators": [],
-      "title": "Page Classes",
-      "help": "Used to style or manipulate the look and feel of this Page (or submenu). These are predefined in the theme or added in Project Settings > Custom CSS/Less code."
+      "title": "Incluir clases",
+      "help": "Se utiliza para diseñar o manipular la apariencia de esta página (o submenú). Estos están predefinidos en el tema o se agregan en Configuración del proyecto > CSS personalizado/código LESS."
     },
     "_isOptional": {
       "type": "boolean",
@@ -147,8 +153,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this optional?",
-      "help": "An optional page does not have to be completed, nor do any of the articles, blocks and components contained within it."
+      "title": "¿Página opcional?",
+      "help": "Define si es obligario o no completar esto, así como los componentes que este contiene."
     },
     "_isAvailable": {
       "type": "boolean",
@@ -156,8 +162,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this available?",
-      "help": "Controls whether this page and its contents are available in the course or not."
+      "title": "¿Página disponible?",
+      "help": "Define si su contenido esta disponible o no."
     },
     "_isHidden": {
       "type": "boolean",
@@ -165,8 +171,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this hidden?",
-      "help": "Hides this page from the course menu. Needs to be supported by the menu you are using in your course."
+      "title": "¿Ocultar página?",
+      "help": "Establece si se muestra visualmente la página, es equivalente a aplicar el CSS 'display:none'."
     },
     "_isVisible": {
       "type": "boolean",
@@ -174,8 +180,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this visible?",
-      "help": "Equivalent to the CSS visibility property. Unless you have custom code that uses this, it is highly unlikely you would want to change this setting at a page level."
+      "title": "¿Es una página visible?",
+      "help": "Oculta el contenido de la página pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_requireCompletionOf": {
       "type": "number",
@@ -183,21 +189,22 @@
       "isSetting": true,
       "inputType": "Number",
       "validators": ["number"],
-      "title": "Require completion of",
-      "help": "The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed."
+      "title": "Requerir la finalización de",
+      "help": "El número de artículos dentro de esta página que el alumno debe completar para que esta página se establezca como completada. Un valor de -1 requiere que se completen todos."
     },
     "_ariaLevel": {
       "type": "number",
       "default": 0,
       "isSetting": true,
       "inputType": "Number",
+      "title": "Nivel de ARIA",
       "validators": ["number"],
-      "help": "If you need to override the default page ARIA level (as defined in Configuration Settings), set this to any number greater than 0."
+      "help": "Si necesita anular el nivel de ARIA de la página predeterminada (como se define en los Ajustes de configuración), configúrelo en cualquier número mayor que 0."
     },
     "_onScreen": {
       "type": "object",
-      "title": "On-screen classes",
-      "help": "These settings allow you to attach classes to the page when it is within the browser's viewport; helpful for running CSS-based animations on pages as they scroll into view.",
+      "title": "Clases en pantalla",
+      "help": "Estas configuraciones le permiten adjuntar clases a la página cuando está dentro de la ventana gráfica del navegador; útil para ejecutar animaciones basadas en CSS en cursos a medida que se desplazan en la vista.",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -205,7 +212,7 @@
           "isSetting": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled?"
+          "title": "¿Activar?"
         },
         "_classes": {
           "type": "string",
@@ -214,18 +221,18 @@
           "required": false,
           "inputType": "Text",
           "validators": [],
-          "title": "Classes",
-          "help": "The CSS class(es) to add to the page element."
+          "title": "Incluir clases",
+          "help": "Las clases CSS usadas para agregar comportamientos o estilos a los elementos de la página."
         },
         "_percentInviewVertical": {
           "type": "number",
           "required": false,
           "default": 50,
           "isSetting": true,
-          "title": "Percent in view",
+          "title": "Porcentaje visual de la(s) clase(s)",
           "inputType": "Number",
           "validators": ["number"],
-          "help": "Controls what percentage of the page's height needs to be in the viewport in order for the CSS class(es) to be added."
+          "help": "Controla qué porcentaje de la altura de la página debe estar en la ventana gráfica para que se agreguen las clases CSS."
         }
       }
     },
@@ -239,10 +246,13 @@
       "editorOnly": true
     },
     "menuSettings": {
-      "type": "object"
+      "type": "object",
+      "title": "Configuraciones del menú"
+      
     },
     "themeSettings": {
-      "type": "object"
+      "type": "object",
+      "title": "Configuraciones del tema"
     }
   }
 }
