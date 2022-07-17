@@ -51,6 +51,16 @@
       "help": "Título del curso que se mostrará",
       "translatable": true
     },
+    "subtitle": {
+      "type": "string",
+      "required": false,
+      "title": "Subtítulo a mostrar",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Este es el subtítulo que aparecerá en el menú principal del curso",
+      "translatable": true
+    },
     "description": {
       "type": "string",
       "required": false,
@@ -68,6 +78,24 @@
       "inputType": "TextArea",
       "validators": [],
       "translatable": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "title": "Instrucciones",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    },
+    "_htmlClasses": {
+      "type": "string",
+      "required": false,
+      "title": "Clases HTML",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Si se establecen clases, estas clase se aplicarán al elemento <html> cuando se muestre el menú de nivel superior del curso."
     },
     "_extensions": {
       "type": "object"
@@ -172,17 +200,6 @@
               ],
               "translatable": true
             },
-            "skipNavigationText": {
-              "type": "string",
-              "title": "Saltar navegación",
-              "default": "Saltar navegación",
-              "inputType": "Text",
-              "required": true,
-              "validators": [
-                "required"
-              ],
-              "translatable": true
-            },
             "_accessibilityInstructions": {
               "type": "object",
               "title": "Instrucciones de accesibilidad",
@@ -222,14 +239,57 @@
                 }
               }
             },
+            "skipNavigationText": {
+              "type": "string",
+              "title": "Saltar navegación",
+              "default": "Saltar navegación",
+              "inputType": "Text",
+              "required": true,
+              "validators": [
+                "required"
+              ],
+              "translatable": true
+            },
             "_ariaLabels": {
               "type": "object",
-              "title": "ARIA labels",
+              "title": "Etiquetas ARIA",
               "properties": {
+                "answeredIncorrectly": {
+                  "type": "string",
+                  "title": "Respuesta incorrecta",
+                  "default": "Respuesta incorrecta",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "answeredCorrectly": {
+                  "type": "string",
+                  "title": "Respuesta correcta",
+                  "default": "Respuesta incorrecta",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "selectedAnswer": {
+                  "type": "string",
+                  "title": "Respuesta seleccionada",
+                  "default": "Seleccionada",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "unselectedAnswer": {
+                  "type": "string",
+                  "title": "Respuesta no seleccionada",
+                  "default": "No seleccionada",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
                 "navigation": {
                   "type": "string",
                   "title": "Navegación",
-                  "default": "Barra de navegación del curso",
+                  "default": "Barra de navegación",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -277,7 +337,31 @@
                 "navigationDrawer": {
                   "type": "string",
                   "title": "Navegación de recursos",
-                  "default": "Abrir recursos y buscar",
+                  "default": "Abrir recursos",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "close": {
+                  "type": "string",
+                  "title": "",
+                  "default": "Cerrar",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "closeDrawer": {
+                  "type": "string",
+                  "title": "",
+                  "default": "Cerrar navegación lateral",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "closeResources": {
+                  "type": "string",
+                  "title": "",
+                  "default": "Cerrar recursos",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -385,6 +469,25 @@
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
+                }
+              }
+            }
+          }
+        },
+        "_extensions": {
+          "type": "object",
+          "title": "Extensiones",
+          "default": {},
+          "properties": {
+            "_drawer": {
+              "type": "object",
+              "title": "Navegación lateral",
+              "default": {},
+              "properties": {
+                "_navOrder": {
+                  "type": "number",
+                  "title": "Orden de la barra de navegación",
+                  "default": 0
                 }
               }
             }
@@ -594,6 +697,15 @@
       "inputType": "Text",
       "validators": [],
       "title": "Clases CSS"
+    },
+    "_requireCompletionOf": {
+      "type": "number",
+      "default": -1,
+      "isSetting": true,
+      "inputType": "Number",
+      "validators": ["number"],
+      "title": "Exigir la realización de",
+      "help": "El número de objetos de contenido dentro de este curso que el alumno debe completar para que este curso se establezca como completado. Un valor de -1 requiere que se completen todos."
     },
     "_isSelected": {
       "type": "boolean",
