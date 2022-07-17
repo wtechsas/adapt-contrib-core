@@ -6,17 +6,35 @@
   "properties": {
     "heroImage": {
       "type": "string",
-      "title": "Preview image",
+      "title": "Imagen de vista previa",
       "default": "",
       "inputType": "Asset:image",
       "validators": [],
       "editorOnly": true,
-      "help": "The image that will be shown in the dashboard for this course"
+      "help": "Imagen que se mostrará en la sección de inicio"
+    },
+    "typeCourse": {
+      "type": "string",
+      "title": "Tipo de recurso",
+      "default": "Curso",
+      "inputType": {
+        "type": "Select",
+        "options": [
+          "Curso",
+          "Gamificación",
+          "Simulación"
+        ]
+      },
+      "help": "Tipo de recurso que se está creando",
+      "validators": [
+        "required"
+      ]
     },
     "title": {
       "type": "string",
+      "title": "Título del curso",
       "required": true,
-      "default": "New Course Title",
+      "default": "Nuevo curso",
       "inputType": "Text",
       "validators": [
         "required"
@@ -26,33 +44,37 @@
     "displayTitle": {
       "type": "string",
       "required": false,
-      "default": "New Course Title",
+      "title": "Título a mostrar",
+      "default": "Nuevo curso",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "This is the title that will be displayed on the course's main menu",
+      "help": "Título del curso que se mostrará",
       "translatable": true
     },
     "subtitle": {
       "type": "string",
       "required": false,
+      "title": "Subtítulo a mostrar",
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "This is the subtitle that will be displayed on the course's main menu",
+      "help": "Este es el subtítulo que aparecerá en el menú principal del curso",
       "translatable": true
     },
     "description": {
       "type": "string",
       "required": false,
+      "title": "Descripción del curso",
       "default": "",
       "inputType": "Text",
       "validators": [],
       "translatable": true,
-      "help": "This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course."
+      "help": "Esta descripción se agregará a los metadatos del curso. No se muestra (actualmente) en ninguna parte del curso."
     },
     "body": {
       "type": "string",
       "default": "",
+      "title": "Contenido",
       "inputType": "TextArea",
       "validators": [],
       "translatable": true
@@ -60,7 +82,7 @@
     "instruction": {
       "type": "string",
       "required": false,
-      "title": "Instruction text",
+      "title": "Instrucciones",
       "default": "",
       "inputType": "Text",
       "validators": [],
@@ -69,11 +91,11 @@
     "_htmlClasses": {
       "type": "string",
       "required": false,
-      "title": "HTML Classes",
+      "title": "Clases HTML",
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code."
+      "help": "Si se establecen clases, estas clase se aplicarán al elemento <html> cuando se muestre el menú de nivel superior del curso."
     },
     "_extensions": {
       "type": "object"
@@ -85,8 +107,8 @@
     },
     "_start": {
       "type": "object",
-      "title": "Start settings",
-      "help": "The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu.",
+      "title": "Ajustes de inicio",
+      "help": "Los ajustes de inicio le permiten controlar qué página se mostrará cuando se carga el curso",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -94,11 +116,11 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled?"
+          "title": "¿Habilitado?"
         },
         "_startIds": {
           "type": "array",
-          "title": "Start List",
+          "title": "Lista de salidas",
           "items": {
             "type": "object",
             "properties": {
@@ -114,15 +136,15 @@
                 "editorOnly": true,
                 "inputType": "Checkbox",
                 "validators": [],
-                "title": "Skip if complete?",
-                "help": "If enabled, the page will not be selected as the first page if it has been already viewed/completed"
+                "title": "¿Omitir si está completado?",
+                "help": "La página no se seleccionará como la primera página si ya se ha visto o completado"
               },
               "_className": {
                 "type": "string",
                 "inputType": "Text",
                 "required": true,
-                "title": "Classes",
-                "help": "Optional comma-separated list of class names which will be used to select this start page"
+                "title": "Clases",
+                "help": "Lista opcional separada por comas de los nombres de clases CSS que se usarán para seleccionar esta página de inicio"
               }
             }
           }
@@ -133,8 +155,8 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Force routing",
-          "help": "If enabled, the routing will be forced to the appropriate start page, regardless of the URL"
+          "title": "Forzar enrutamiento",
+          "help": "El enrutamiento se forzará a la página de inicio adecuada, independientemente de la URL"
         },
         "_isMenuDisabled": {
           "type": "boolean",
@@ -142,23 +164,85 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Disable menu",
-          "help": "Allows you to prevent the user from seeing - or navigating to - the main menu"
+          "title": "Deshabilitar menú",
+          "help": "Le permite evitar que el usuario vea o navegue al menú principal"
         }
       }
     },
     "_globals": {
       "type": "object",
+      "title": "Configuración global",
       "properties": {
         "_accessibility": {
           "type": "object",
           "title": "Accessibility",
           "required": true,
           "properties": {
+            "accessibilityToggleTextOn": {
+              "type": "string",
+              "title": "Accesibilidad activada",
+              "default": "¿Habilitar accesibilidad?",
+              "inputType": "Text",
+              "required": true,
+              "validators": [
+                "required"
+              ],
+              "translatable": true
+            },
+            "accessibilityToggleTextOff": {
+              "type": "string",
+              "title": "Accesibilidad desactivada",
+              "default": "¿Deshabiitar accesibilidad?",
+              "inputType": "Text",
+              "required": true,
+              "validators": [
+                "required"
+              ],
+              "translatable": true
+            },
+            "_accessibilityInstructions": {
+              "type": "object",
+              "title": "Instrucciones de accesibilidad",
+              "properties": {
+                "touch": {
+                  "type": "string",
+                  "title": "Para dispositivos táctiles",
+                  "default": "Instrucciones de uso. Deslizar el dedo hacia la izquierda para ver lo siguiente. Deslizar el dedo hacia la derecha para ver lo anterior. Utilizar doble toque de pantalla para seleccionar. Usar los dos dedos para desplazarse hacia arriba o abajo en la página.",
+                  "inputType": "Text",
+                  "required": true,
+                  "validators": [
+                    "required"
+                  ],
+                  "translatable": true
+                },
+                "notouch": {
+                  "type": "string",
+                  "title": "Para dispositivos no táctiles",
+                  "default": "Instrucciones de uso. Usar la tecla tabulador para siguiente. Usar las teclas shift + tabulador para anterior. Usar la tecla enter para seleccionar. Usar la tecla escape para ir al inicio de la página.",
+                  "inputType": "Text",
+                  "required": true,
+                  "validators": [
+                    "required"
+                  ],
+                  "translatable": true
+                },
+                "ipad": {
+                  "type": "string",
+                  "title": "Para dispositivos iPad",
+                  "default": "Instrucciones de uso para pantallas táctiles. Deslizar el dedo hacia la izquierda para ver lo siguiente. Deslizar el dedo hacia la derecha para ver lo anterior. Usar un doble toque de pantalla para seleccionar. Usar un deslizamiento de dos dedos hacia arriba para ir al principio de la página.",
+                  "inputType": "Text",
+                  "required": true,
+                  "validators": [
+                    "required"
+                  ],
+                  "translatable": true
+                }
+              }
+            },
             "skipNavigationText": {
               "type": "string",
-              "title": "Skip navigation label",
-              "default": "Skip navigation",
+              "title": "Saltar navegación",
+              "default": "Saltar navegación",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -168,60 +252,92 @@
             },
             "_ariaLabels": {
               "type": "object",
-              "title": "ARIA labels",
+              "title": "Etiquetas ARIA",
               "properties": {
                 "answeredIncorrectly": {
                   "type": "string",
-                  "title": "",
-                  "default": "You answered incorrectly",
+                  "title": "Respuesta incorrecta",
+                  "default": "Respuesta incorrecta",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "answeredCorrectly": {
                   "type": "string",
-                  "title": "",
-                  "default": "You answered correctly",
+                  "title": "Respuesta correcta",
+                  "default": "Respuesta incorrecta",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "selectedAnswer": {
                   "type": "string",
-                  "title": "",
-                  "default": "selected",
+                  "title": "Respuesta seleccionada",
+                  "default": "Seleccionada",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "unselectedAnswer": {
                   "type": "string",
-                  "title": "",
-                  "default": "not selected",
+                  "title": "Respuesta no seleccionada",
+                  "default": "No seleccionada",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "navigation": {
+                  "type": "string",
+                  "title": "Navegación",
+                  "default": "Barra de navegación",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "skipNavigation": {
                   "type": "string",
-                  "title": "Skip Navigation",
-                  "default": "Skip Navigation",
+                  "title": "Saltar navegación",
+                  "default": "Saltar navegación",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "menuLoaded": {
+                  "type": "string",
+                  "title": "Menú cargado",
+                  "default": "Menú cargado",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "page": {
+                  "type": "string",
+                  "title": "Página",
+                  "default": "Página",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "pageLoaded": {
+                  "type": "string",
+                  "title": "Página cargada",
+                  "default": "Página cargada",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "previous": {
                   "type": "string",
-                  "title": "",
-                  "default": "Back",
+                  "title": "Atrás",
+                  "default": "Atrás",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "navigationDrawer": {
                   "type": "string",
-                  "title": "",
-                  "default": "Open course resources.",
+                  "title": "Navegación de recursos",
+                  "default": "Abrir recursos",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -229,7 +345,7 @@
                 "close": {
                   "type": "string",
                   "title": "",
-                  "default": "Close",
+                  "default": "Cerrar",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -237,7 +353,7 @@
                 "closeDrawer": {
                   "type": "string",
                   "title": "",
-                  "default": "Close Drawer",
+                  "default": "Cerrar navegación lateral",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -245,87 +361,111 @@
                 "closeResources": {
                   "type": "string",
                   "title": "",
-                  "default": "Close resources",
+                  "default": "Cerrar recursos",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "drawer": {
                   "type": "string",
-                  "title": "",
-                  "default": "Top of side drawer",
+                  "title": "Navegación lateral",
+                  "default": "Barra de navegación lateral",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "closePopup": {
                   "type": "string",
-                  "title": "",
-                  "default": "Close popup",
+                  "title": "Cerrar ventana emergente",
+                  "default": "Cerrar ventana emergente",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "next": {
                   "type": "string",
-                  "title": "",
-                  "default": "Next",
+                  "title": "Siguiente",
+                  "default": "Siguiente",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "done": {
                   "type": "string",
-                  "title": "",
-                  "default": "Done",
+                  "title": "Hecho",
+                  "default": "Hecho",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "complete": {
                   "type": "string",
-                  "title": "",
-                  "default": "Completed",
+                  "title": "Completo",
+                  "default": "Completo",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "incomplete": {
                   "type": "string",
-                  "title": "",
-                  "default": "Incomplete",
-                  "inputType": "Text",
-                  "required": true,
-                  "translatable": true
-                },
-                "incorrect": {
-                  "type": "string",
-                  "title": "",
-                  "default": "Incorrect",
+                  "title": "Incompleto",
+                  "default": "Incompleto",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "correct": {
                   "type": "string",
-                  "title": "",
-                  "default": "Correct",
+                  "title": "Correcto",
+                  "default": "Correcto",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "incorrect": {
+                  "type": "string",
+                  "title": "Incorrecto",
+                  "default": "Incorrecto",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "locked": {
                   "type": "string",
-                  "title": "",
-                  "default": "Locked",
+                  "title": "Bloqueado",
+                  "default": "Bloqueado",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "accessibilityToggleButton": {
+                  "type": "string",
+                  "title": "Botón de accesibilidad",
+                  "default": "Seleccionando este botón se puede establecer si la accesibilidad está activada o desactivada",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "feedbackPopUp": {
+                  "type": "string",
+                  "title": "Ventana emergente de retroalimentación",
+                  "default": "Retroalimentación abierta",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "visited": {
                   "type": "string",
-                  "title": "",
-                  "default": "Visited",
+                  "title": "Visitado",
+                  "default": "Visitado",
+                  "inputType": "Text",
+                  "required": true,
+                  "translatable": true
+                },
+                "menuIndicatorHeading": {
+                  "type": "string",
+                  "title": "Indicador de título del menú",
+                  "default": "Título del menú",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -336,17 +476,17 @@
         },
         "_extensions": {
           "type": "object",
-          "title": "Extensions",
+          "title": "Extensiones",
           "default": {},
           "properties": {
             "_drawer": {
               "type": "object",
-              "title": "Drawer",
+              "title": "Navegación lateral",
               "default": {},
               "properties": {
                 "_navOrder": {
                   "type": "number",
-                  "title": "Navigation bar order",
+                  "title": "Orden de la barra de navegación",
                   "default": 0
                 }
               }
@@ -358,16 +498,17 @@
     "_buttons": {
       "type": "object",
       "default": "",
-      "title": "",
+      "title": "Botones",
       "isSetting": false,
       "properties": {
         "_submit": {
           "type": "object",
-          "title": "Submit",
+          "title": "Enviar",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Submit",
+              "title": "Texto del botón",
+              "default": "Enviar",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -377,8 +518,8 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
-              "default": "Submit",
+              "title": "Etiqueta ARIA",
+              "default": "Enviar",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -390,11 +531,12 @@
         },
         "_reset": {
           "type": "object",
-          "title": "Reset",
+          "title": "Reiniciar",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Reset",
+              "title": "Texto del botón",
+              "default": "Reiniciar",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -404,8 +546,8 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
-              "default": "Reset",
+              "title": "Etiqueta ARIA",
+              "default": "Reiniciar",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -417,11 +559,12 @@
         },
         "_showCorrectAnswer": {
           "type": "object",
-          "title": "Show correct answer",
+          "title": "Ver respuesta correcta",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Show correct answer",
+              "title": "Texto del botón",
+              "default": "Ver respuesta correcta",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -431,8 +574,8 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
-              "default": "Show correct answer",
+              "title": "Etiqueta ARIA",
+              "default": "Ver respuesta correcta",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -444,11 +587,12 @@
         },
         "_hideCorrectAnswer": {
           "type": "object",
-          "title": "Hide correct answer",
+          "title": "Ocultar respuesta correcta",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Show your answer",
+              "title": "Texto del botón",
+              "default": "Ocultar respuesta correcta",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -458,8 +602,8 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
-              "default": "Show your answer",
+              "title": "Etiqueta ARIA",
+              "default": "Ocultar respuesta correcta",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -471,11 +615,12 @@
         },
         "_showFeedback": {
           "type": "object",
-          "title": "Show feedback",
+          "title": "Ver retroalimentación",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Show feedback",
+              "title": "Texto del botón",
+              "default": "Ver retroalimentación",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -485,8 +630,8 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
-              "default": "Show feedback",
+              "title": "Etiqueta ARIA",
+              "default": "Ver retroalimentación",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -498,8 +643,8 @@
         },
         "remainingAttemptsText": {
           "type": "string",
-          "title": "Remaining attempts label",
-          "default": "attempts remaining",
+          "title": "Intentos restantes",
+          "default": "Intentos restantes",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -509,8 +654,8 @@
         },
         "remainingAttemptText": {
           "type": "string",
-          "title": "Final attempt label",
-          "default": "final attempt",
+          "title": "Último intento",
+          "default": "Último intento",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -520,8 +665,8 @@
         },
         "disabledAriaLabel": {
           "type": "string",
-          "title": "Disabled ARIA label",
-          "default": "This button is disabled at the moment",
+          "title": "Botón deshabilitado",
+          "default": "Este botón está deshabilitado por el momento",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -541,8 +686,8 @@
         "editorOnly": true,
         "ref": "tag"
       },
-      "title": "Tags",
-      "help": "Add tags to your course by entering one or more words, separated with a comma (,)",
+      "title": "Etiqueta",
+      "help": "Añadir una etiqueta al curso para identificar su a que etiqueta pertenece",
       "editorOnly": true
     },
     "_classes": {
@@ -551,8 +696,7 @@
       "isSetting": true,
       "inputType": "Text",
       "validators": [],
-      "title": "Menu Classes",
-      "help": "Used to style or manipulate the look and feel of the top level Menu. These are predefined in the theme or added in Custom CSS/Less code."
+      "title": "Clases CSS"
     },
     "_requireCompletionOf": {
       "type": "number",
@@ -560,8 +704,8 @@
       "isSetting": true,
       "inputType": "Number",
       "validators": ["number"],
-      "title": "Require completion of",
-      "help": "The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed."
+      "title": "Exigir la realización de",
+      "help": "El número de objetos de contenido dentro de este curso que el alumno debe completar para que este curso se establezca como completado. Un valor de -1 requiere que se completen todos."
     },
     "_isSelected": {
       "type": "boolean",
@@ -579,8 +723,8 @@
       "editorOnly": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Share with all users",
-      "help": "Defines whether this course will be editable by all users"
+      "title": "Compartir con todos los usuarios",
+      "help": "Permitir si los demás usuarios pueden ver este curso desde la opción 'Cursos compartidos'."
     },
     "_shareWithUsers": {
       "type": "array",
@@ -592,17 +736,20 @@
         "editorOnly": true,
         "ref": "user"
       },
-      "title": "Share with specific users",
-      "help": "Defines which individual users are able to edit this course"
+      "title": "Compartir con usuarios especificos",
+      "help": "Permitir qué usuarios pueden ver este curso desde la opción 'Cursos compartidos'."
     },
     "themeSettings": {
-      "type": "object"
+      "type": "object",
+      "title": "Configuraciones del tema"
     },
     "themeVariables": {
-      "type": "object"
+      "type": "object",
+      "title": "Variables del tema"
     },
     "menuSettings": {
-      "type": "object"
+      "type": "object",
+      "title": "Configuraciones del menú"
     },
     "_lockType": {
       "type": "string",
@@ -610,15 +757,15 @@
       "inputType": {
         "type": "Select",
         "options": [
-          "",
-          "custom",
-          "lockLast",
-          "sequential",
-          "unlockFirst"
+          {"val":"", "label":""},
+          {"val":"custom", "label":"personalizado"},
+          {"val":"lockLast", "label":"bloquear el último"},
+          {"val":"sequential", "label":"secuencial"},
+          {"val":"unlockFirst", "label":"desbloquear el primero"}
         ]
       },
-      "title": "Menu lock type",
-      "help": "Defines which (if any) locking mechanism will be used for menu items",
+      "title": "Tipo de bloqueo del menú",
+      "help": "Define qué mecanismo de bloqueo (si los hay) se utilizará para los elementos del menú",
       "validators": []
     },
     "customStyle": {
@@ -626,8 +773,8 @@
       "default": "",
       "inputType": "CodeEditor:less",
       "validators": [],
-      "title": "Custom CSS/LESS code",
-      "help": "Add any custom CSS or valid LESS code here"
+      "title": "Código CSS/LESS personalizado",
+      "help": "Agregar cualquier CSS o LESS personalizado"
     },
     "externalReferences": {
       "type" : "object"

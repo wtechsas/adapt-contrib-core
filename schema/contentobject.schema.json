@@ -7,6 +7,9 @@
       "$ref": "content"
     },
     "with": {
+      "required": [
+        "linkText"
+      ],
       "properties": {
         "subtitle": {
           "type": "string",
