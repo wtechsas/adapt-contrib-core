@@ -75,6 +75,7 @@
       "type": "string",
       "default": "",
       "title": "Contenido",
+      "required": true,
       "inputType": "TextArea",
       "validators": [],
       "translatable": true
