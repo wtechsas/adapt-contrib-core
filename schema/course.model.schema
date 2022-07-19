@@ -77,7 +77,7 @@
       "title": "Contenido",
       "required": true,
       "inputType": "TextArea",
-      "validators": [],
+      "validators": ["required"],
       "translatable": true
     },
     "instruction": {
