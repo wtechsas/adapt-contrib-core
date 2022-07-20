@@ -688,7 +688,7 @@
         "ref": "tag"
       },
       "title": "Etiqueta",
-      "help": "Añadir una etiqueta al curso para identificar su a que etiqueta pertenece",
+      "help": "Añadir una etiqueta al curso para identificar su clasificación",
       "editorOnly": true
     },
     "_classes": {
