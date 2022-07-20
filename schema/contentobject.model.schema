@@ -40,12 +40,12 @@
       "validators": [],
       "title": "Contenido de la página",
       "translatable": true,
-      "help": "Si se establece, este texto se mostrará en lugar del texto del indice del curso cuando se vea esta página."
+      "help": "Si se establece, este texto se mostrará en lugar del texto del índice del curso cuando se vea esta página."
     },
     "body":{
       "type": "string",
       "default" : "",
-      "title": "Indice",
+      "title": "Índice",
       "inputType": "TextArea",
       "validators": [],
       "translatable": true
