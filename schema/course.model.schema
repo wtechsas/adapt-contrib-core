@@ -176,7 +176,7 @@
       "properties": {
         "_accessibility": {
           "type": "object",
-          "title": "Accessibility",
+          "title": "Accesibilidad",
           "required": true,
           "properties": {
             "accessibilityToggleTextOn": {
