@@ -48,7 +48,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Componente disponible?",
-      "help": "Define si un componente y su contenido esta disponible o no en el curso."
+      "help": "Define si un componente y su contenido esta disponible o no en el recurso."
     },
     "_isHidden": {
       "type": "boolean",
@@ -66,7 +66,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Es un componente visible?",
-      "help": "Oculta el contenido del componente pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
+      "help": "Oculta el contenido del componente pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_isResetOnRevisit": {
       "type": "string",

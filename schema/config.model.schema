@@ -31,7 +31,7 @@
           "inputType": "Checkbox",
           "validators": [],
           "title": "¿Requerir finalización de contenido?",
-          "help": "Especifica que se debe completar todo el contenido del curso."
+          "help": "Especifica que se debe completar todo el contenido del recurso."
         },
         "_requireAssessmentCompleted": {
           "type": "boolean",
@@ -39,7 +39,7 @@
           "inputType": "Checkbox",
           "validators": [],
           "title": "¿Requerir finalización de la evaluación?",
-          "help": "Especifica que se deben completar todas las evaluaciones del curso."
+          "help": "Especifica que se deben completar todas las evaluaciones del recurso."
         }
       }
     },
@@ -337,7 +337,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Generar mapas fuente?",
-      "help": "Permite depurar JavaScript y CSS del curso a través de las herramientas de desarrollo del navegador."
+      "help": "Permite depurar JavaScript y CSS del recurso a través de las herramientas de desarrollo del navegador."
     },
     "_forceRouteLocking": {
       "type": "boolean",

@@ -47,7 +47,7 @@
       "inputType": "Text",
       "validators": [],
       "title": "Incluir clases",
-      "help": "Se utiliza para diseñar o manipular la apariencia de este artículo. Estos están predefinidos en el tema o en la configuración del curso."
+      "help": "Se utiliza para diseñar o manipular la apariencia de este artículo. Estos están predefinidos en el tema o en la configuración del recurso."
     },
     "_isOptional": {
       "type": "boolean",
@@ -65,7 +65,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Artículo disponible?",
-      "help": "Define si un artículo y su contenido esta disponible o no en el curso."
+      "help": "Define si un artículo y su contenido esta disponible o no en el recurso."
     },
     "_isHidden": {
       "type": "boolean",
@@ -83,7 +83,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Es un artículo visible?",
-      "help": "Oculta el contenido del artículo pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
+      "help": "Oculta el contenido del artículo pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_requireCompletionOf": {
       "type": "number",
