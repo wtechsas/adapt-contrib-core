@@ -11,6 +11,7 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
+      "help": "Texto que se usa como el identificador de la página",
       "translatable": true
     },
     "displayTitle": {
@@ -48,6 +49,7 @@
       "title": "Índice",
       "inputType": "TextArea",
       "validators": [],
+      "help": "Índice que se muestra al inicio de la página",
       "translatable": true
     },
     "instruction": {
@@ -57,6 +59,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
+      "help": "Instrucciones que se le brindan al usuario con respecto a la página",
       "translatable": true
     },
     "_htmlClasses": {
@@ -100,6 +103,7 @@
       "default": "Ver",
       "inputType": "Text",
       "validators" : ["required"],
+      "help": "Corresponde al texto del botón para abrir la página",
       "translatable": true
     },
     "duration": {
@@ -248,7 +252,6 @@
     "menuSettings": {
       "type": "object",
       "title": "Configuraciones del menú"
-      
     },
     "themeSettings": {
       "type": "object",

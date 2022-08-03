@@ -20,6 +20,7 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
+      "help": "Texto que se usa como el identificador del bloque",
       "translatable": true
     },
     "displayTitle": {
@@ -38,6 +39,7 @@
       "title" : "Contenido",
       "inputType": "TextArea",
       "validators": [],
+      "help": "Corresponde al contenido del bloque",
       "translatable": true
     },
     "instruction": {
@@ -47,6 +49,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
+      "help": "Instrucciones que se le brindan al usuario con respecto al bloque",
       "translatable": true
     },
     "_classes": {

@@ -11,6 +11,7 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
+      "help": "Texto que se usa como el identificador del artículo",
       "translatable": true
     },
     "displayTitle": {
@@ -29,6 +30,7 @@
       "inputType": "TextArea",
       "title": "Contenido",
       "validators": [],
+      "help": "Corresponde al contenido del artículo ",
       "translatable": true
     },
     "instruction": {
@@ -38,6 +40,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
+      "help": "Instrucciones que se le brindan al usuario con respecto al artículo",
       "translatable": true
     },
     "_classes": {

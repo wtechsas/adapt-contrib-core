@@ -49,7 +49,8 @@
       "default": "en",
       "title": "Idioma predeterminado",
       "inputType": "Text",
-      "validators": ["required"]
+      "validators": ["required"],
+      "help": "Corresponde al idioma predeterminado del recurso"
     },
     "_defaultDirection": {
       "type": "string",
@@ -57,6 +58,7 @@
       "default": "ltr",
       "title": "Dirección del texto",
       "validators": ["required"],
+      "help": "Indica la orientación que tendra el texto",
       "inputType": {
         "type": "Select",
         "options": [
@@ -74,7 +76,8 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "¿Habilitar funciones de accesibilidad?"
+          "title": "¿Habilitar funciones de accesibilidad?",
+          "help": "Habilita las funciones de accesibilidad en el recurso"
         },
         "_isSkipNavigationEnabled": {
           "type": "boolean",
@@ -95,7 +98,8 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento de menú",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para elemento de menú"
             },
             "_menuGroup": {
               "type": "number",
@@ -120,7 +124,8 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento de página",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de página"
             },
             "_article": {
               "type": "number",
@@ -128,7 +133,8 @@
               "default": 2,
               "title": "Nivel de ARIA para el elemento de artículo",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de artículo"
             },
             "_block": {
               "type": "number",
@@ -136,7 +142,8 @@
               "default": 3,
               "title": "Nivel de ARIA para el elemento de bloque",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de bloque"
             },
             "_component": {
               "type": "number",
@@ -144,7 +151,8 @@
               "default": 4,
               "title": "Nivel de ARIA para el elemento de componente",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de componente"
             },
             "_componentItem": {
               "type": "number",
@@ -152,7 +160,8 @@
               "default": 5,
               "title": "Nivel de ARIA para el elemento item de componente",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento ítem de componente"
             },
             "_notify": {
               "type": "number",
@@ -160,7 +169,8 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento notificación emergente",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de notificación emergente"
             }
           }
         },
@@ -230,7 +240,8 @@
       "isSetting": true,
       "title": "Peso de la pregunta",
       "inputType": "Number",
-      "validators": ["required", "number"]
+      "validators": ["required", "number"],
+      "help": "Corresponde al valor que tendra la pregunta"
     },
     "_drawer": {
       "type": "object",
@@ -277,7 +288,8 @@
               {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
             ]
           },
-          "validators": ["required"]
+          "validators": ["required"],
+          "help": "Indica como estan dadas las transiciones al mostrarse"
         },
         "_hideEasing": {
           "type": "string",
@@ -318,7 +330,8 @@
               {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
             ]
           },
-          "validators": ["required"]
+          "validators": ["required"],
+          "help": "Indica como estan dadas las transiciones al ocultarse"
         },
         "_duration": {
           "type": "number",
@@ -326,7 +339,8 @@
           "default": 400,
           "title": "Duración",
           "inputType": "Number",
-          "validators": ["required", "number"]
+          "validators": ["required", "number"],
+          "help": "Indica la duración de la transición"
         }
       }
     },

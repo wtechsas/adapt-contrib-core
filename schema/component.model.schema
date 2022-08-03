@@ -118,6 +118,7 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
+      "help": "Texto que se usa como el identificador del componente",
       "translatable": true
     },
     "displayTitle": {
@@ -136,6 +137,7 @@
       "title": "Contenido",
       "inputType": "TextArea",
       "validators": [],
+      "help": "Corresponde al contenido del componente",
       "translatable": true
     },
     "_onScreen": {
