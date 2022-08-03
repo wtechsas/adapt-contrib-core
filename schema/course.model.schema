@@ -16,11 +16,11 @@
     "typeCourse": {
       "type": "string",
       "title": "Tipo de recurso",
-      "default": "RED",
+      "default": "Curso",
       "inputType": {
         "type": "Select",
         "options": [
-          "RED",
+          "Curso",
           "Gamificación",
           "Simulación"
         ]
@@ -32,9 +32,9 @@
     },
     "title": {
       "type": "string",
-      "title": "Título del recurso",
+      "title": "Título del curso",
       "required": true,
-      "default": "Nuevo recurso",
+      "default": "Nuevo curso",
       "inputType": "Text",
       "validators": [
         "required"
@@ -45,10 +45,10 @@
       "type": "string",
       "required": false,
       "title": "Título a mostrar",
-      "default": "Nuevo recurso",
+      "default": "Nuevo curso",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "Título del recurso que se mostrará",
+      "help": "Título del curso que se mostrará",
       "translatable": true
     },
     "subtitle": {
@@ -58,18 +58,18 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Este es el subtítulo que aparecerá en el menú principal del recurso",
+      "help": "Este es el subtítulo que aparecerá en el menú principal del curso",
       "translatable": true
     },
     "description": {
       "type": "string",
       "required": false,
-      "title": "Descripción del recurso",
+      "title": "Descripción del curso",
       "default": "",
       "inputType": "Text",
       "validators": [],
       "translatable": true,
-      "help": "Esta descripción se agregará a los metadatos del recurso. No se muestra (actualmente) en ninguna parte del recurso."
+      "help": "Esta descripción se agregará a los metadatos del curso. No se muestra (actualmente) en ninguna parte del curso."
     },
     "body": {
       "type": "string",
@@ -96,7 +96,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Si se establecen clases, estas se aplicarán al elemento <html> cuando se muestre el menú de nivel superior del recurso."
+      "help": "Si se establecen clases, estas clase se aplicarán al elemento <html> cuando se muestre el menú de nivel superior del curso."
     },
     "_extensions": {
       "type": "object"
@@ -109,7 +109,7 @@
     "_start": {
       "type": "object",
       "title": "Ajustes de inicio",
-      "help": "Los ajustes de inicio le permiten controlar qué página se mostrará cuando se carga el recurso",
+      "help": "Los ajustes de inicio le permiten controlar qué página se mostrará cuando se carga el curso",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -688,7 +688,7 @@
         "ref": "tag"
       },
       "title": "Etiqueta",
-      "help": "Añadir una etiqueta al recurso para identificar su clasificación",
+      "help": "Añadir una etiqueta al curso para identificar su clasificación",
       "editorOnly": true
     },
     "_classes": {
@@ -706,7 +706,7 @@
       "inputType": "Number",
       "validators": ["number"],
       "title": "Exigir la realización de",
-      "help": "El número de objetos de contenido dentro de este recurso que el alumno debe completar para que este se establezca como completado. Un valor de -1 requiere que se completen todos."
+      "help": "El número de objetos de contenido dentro de este curso que el alumno debe completar para que este curso se establezca como completado. Un valor de -1 requiere que se completen todos."
     },
     "_isSelected": {
       "type": "boolean",
@@ -725,7 +725,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "Compartir con todos los usuarios",
-      "help": "Permitir si los demás usuarios pueden ver este recurso desde la opción 'Recursos compartidos'."
+      "help": "Permitir si los demás usuarios pueden ver este curso desde la opción 'Cursos compartidos'."
     },
     "_shareWithUsers": {
       "type": "array",
@@ -738,7 +738,7 @@
         "ref": "user"
       },
       "title": "Compartir con usuarios especificos",
-      "help": "Permitir qué usuarios pueden ver este recurso desde la opción 'Recursos compartidos'."
+      "help": "Permitir qué usuarios pueden ver este curso desde la opción 'Cursos compartidos'."
     },
     "themeSettings": {
       "type": "object",

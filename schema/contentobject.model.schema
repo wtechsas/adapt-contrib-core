@@ -11,6 +11,7 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
+      "help": "Texto que se usa como el identificador de la página",
       "translatable": true
     },
     "displayTitle": {
@@ -38,9 +39,10 @@
       "default" : "",
       "inputType": "TextArea",
       "validators": [],
+      "help": "Corresponde al contenido de la página",
       "title": "Contenido de la página",
       "translatable": true,
-      "help": "Si se establece, este texto se mostrará en lugar del texto del índice recurso cuando se vea esta página."
+      "help": "Si se establece, este texto se mostrará en lugar del texto del índice del curso cuando se vea esta página."
     },
     "body":{
       "type": "string",
@@ -48,6 +50,7 @@
       "title": "Índice",
       "inputType": "TextArea",
       "validators": [],
+      "help": "Índice que se muestra al inicio de la página",
       "translatable": true
     },
     "instruction": {
@@ -57,6 +60,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
+      "help": "Instrucciones que se le brindan al usuario con respecto a la página",
       "translatable": true
     },
     "_htmlClasses": {
@@ -66,7 +70,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Si se configura, esta clase o clases de CSS se aplicarán al elemento <html> siempre que esta sea la página activa del recurso. Estos están predefinidos en el tema o se agregan en Configuración del proyecto > CSS personalizado/código LESS."
+      "help": "Si se configura, esta clase o clases de CSS se aplicarán al elemento <html> siempre que esta sea la página activa del curso. Estos están predefinidos en el tema o se agregan en Configuración del proyecto > CSS personalizado/código LESS."
     },
     "_graphic": {
       "type": "object",
@@ -96,10 +100,11 @@
     "linkText": {
       "type": "string",
       "required": false,
-      "title": "Texto del botón para abrir un recurso",
+      "title": "Texto del botón para abrir un curso",
       "default": "Ver",
       "inputType": "Text",
       "validators" : ["required"],
+      "help": "Corresponde al texto del botón para abrir la página",
       "translatable": true
     },
     "duration": {
@@ -119,7 +124,7 @@
       "title": "Bloqueado por",
       "inputType": "List",
       "validators": [],
-      "help": "Si el recurso utiliza un tipo de bloqueo de menú 'personalizado', este debe contener la identificación única de los elementos que deben completarse antes de que se desbloquee."
+      "help": "Si el curso utiliza un tipo de bloqueo de menú 'personalizado', este debe contener la identificación única de los elementos que deben completarse antes de que se desbloquee."
     },
     "_lockType": {
       "type": "string",
@@ -181,7 +186,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Es una página visible?",
-      "help": "Oculta el contenido de la página pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
+      "help": "Oculta el contenido de la página pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_requireCompletionOf": {
       "type": "number",
@@ -204,7 +209,7 @@
     "_onScreen": {
       "type": "object",
       "title": "Clases en pantalla",
-      "help": "Estas configuraciones le permiten adjuntar clases a la página cuando está dentro de la ventana gráfica del navegador; útil para ejecutar animaciones basadas en CSS en recursos a medida que se desplazan en la vista.",
+      "help": "Estas configuraciones le permiten adjuntar clases a la página cuando está dentro de la ventana gráfica del navegador; útil para ejecutar animaciones basadas en CSS en cursos a medida que se desplazan en la vista.",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -248,7 +253,7 @@
     "menuSettings": {
       "type": "object",
       "title": "Configuraciones del menú"
-      
+
     },
     "themeSettings": {
       "type": "object",
