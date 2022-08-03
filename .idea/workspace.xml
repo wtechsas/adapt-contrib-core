@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d764f433-ee0b-4e66-8827-69b4c466b7e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github" beforeDir="false" afterPath="$PROJECT_DIR$/.github" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/article.model.schema" beforeDir="false" afterPath="$PROJECT_DIR$/schema/article.model.schema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/block.model.schema" beforeDir="false" afterPath="$PROJECT_DIR$/schema/block.model.schema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/component.model.schema" beforeDir="false" afterPath="$PROJECT_DIR$/schema/component.model.schema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/config.model.schema" beforeDir="false" afterPath="$PROJECT_DIR$/schema/config.model.schema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/contentobject.model.schema" beforeDir="false" afterPath="$PROJECT_DIR$/schema/contentobject.model.schema" afterDir="false" />
-    </list>
+    <list default="true" id="d764f433-ee0b-4e66-8827-69b4c466b7e2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +47,7 @@
       <updated>1659532802356</updated>
       <workItem from="1659532804375" duration="713000" />
       <workItem from="1659557261755" duration="403000" />
-      <workItem from="1659557702609" duration="1432000" />
+      <workItem from="1659557702609" duration="1748000" />
     </task>
     <servers />
   </component>
