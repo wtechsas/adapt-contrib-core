@@ -31,7 +31,7 @@
           "inputType": "Checkbox",
           "validators": [],
           "title": "¿Requerir finalización de contenido?",
-          "help": "Especifica que se debe completar todo el contenido del curso."
+          "help": "Especifica que se debe completar todo el contenido del recurso."
         },
         "_requireAssessmentCompleted": {
           "type": "boolean",
@@ -39,7 +39,7 @@
           "inputType": "Checkbox",
           "validators": [],
           "title": "¿Requerir finalización de la evaluación?",
-          "help": "Especifica que se deben completar todas las evaluaciones del curso."
+          "help": "Especifica que se deben completar todas las evaluaciones del recurso."
         }
       }
     },
@@ -49,8 +49,7 @@
       "default": "en",
       "title": "Idioma predeterminado",
       "inputType": "Text",
-      "validators": ["required"],
-      "help": "Corresponde al idioma predeterminado del recurso"
+      "validators": ["required"]
     },
     "_defaultDirection": {
       "type": "string",
@@ -58,7 +57,6 @@
       "default": "ltr",
       "title": "Dirección del texto",
       "validators": ["required"],
-      "help": "Indica la orientación que tendra el texto",
       "inputType": {
         "type": "Select",
         "options": [
@@ -76,7 +74,6 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "help": "Habilita las funciones de accesibilidad en el recurso",
           "title": "¿Habilitar funciones de accesibilidad?"
         },
         "_isSkipNavigationEnabled": {
@@ -98,8 +95,7 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento de menú",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para elemento de menú"
+              "validators": ["required", "number"]
             },
             "_menuGroup": {
               "type": "number",
@@ -107,8 +103,7 @@
               "default": 2,
               "title": "Nivel de ARIA para el elemento de menú de grupo",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de menúde grupo"
+              "validators": ["required", "number"]
             },
             "_menuItem": {
               "type": "number",
@@ -125,8 +120,7 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento de página",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de página"
+              "validators": ["required", "number"]
             },
             "_article": {
               "type": "number",
@@ -134,8 +128,7 @@
               "default": 2,
               "title": "Nivel de ARIA para el elemento de artículo",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de artículo"
+              "validators": ["required", "number"]
             },
             "_block": {
               "type": "number",
@@ -143,8 +136,7 @@
               "default": 3,
               "title": "Nivel de ARIA para el elemento de bloque",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de bloque"
+              "validators": ["required", "number"]
             },
             "_component": {
               "type": "number",
@@ -152,8 +144,7 @@
               "default": 4,
               "title": "Nivel de ARIA para el elemento de componente",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de componente"
+              "validators": ["required", "number"]
             },
             "_componentItem": {
               "type": "number",
@@ -161,8 +152,7 @@
               "default": 5,
               "title": "Nivel de ARIA para el elemento item de componente",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento ítem de componente"
+              "validators": ["required", "number"]
             },
             "_notify": {
               "type": "number",
@@ -170,8 +160,7 @@
               "default": 1,
               "title": "Nivel de ARIA para el elemento notificación emergente",
               "inputType": "Number",
-              "validators": ["required", "number"],
-              "help": "Indica el nivel de ARIA para el elemento de notificación emergente"
+              "validators": ["required", "number"]
             }
           }
         },
@@ -241,8 +230,7 @@
       "isSetting": true,
       "title": "Peso de la pregunta",
       "inputType": "Number",
-      "validators": ["required", "number"],
-      "help": "Corresponde al valor que tendra la pregunta"
+      "validators": ["required", "number"]
     },
     "_drawer": {
       "type": "object",
@@ -289,8 +277,7 @@
               {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
             ]
           },
-          "validators": ["required"],
-          "help": "Indica como estan dadas las transiciones al mostrarse"
+          "validators": ["required"]
         },
         "_hideEasing": {
           "type": "string",
@@ -331,8 +318,7 @@
               {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
             ]
           },
-          "validators": ["required"],
-          "help": "Indica como estan dadas las transiciones al ocultarse"
+          "validators": ["required"]
         },
         "_duration": {
           "type": "number",
@@ -340,8 +326,7 @@
           "default": 400,
           "title": "Duración",
           "inputType": "Number",
-          "validators": ["required", "number"],
-          "help": "Indica la duración de la transición"
+          "validators": ["required", "number"]
         }
       }
     },
@@ -352,7 +337,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Generar mapas fuente?",
-      "help": "Permite depurar JavaScript y CSS del curso a través de las herramientas de desarrollo del navegador."
+      "help": "Permite depurar JavaScript y CSS del recurso a través de las herramientas de desarrollo del navegador."
     },
     "_forceRouteLocking": {
       "type": "boolean",

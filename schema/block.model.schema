@@ -20,7 +20,6 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
-      "help": "Texto que se usa como el identificador del bloque",
       "translatable": true
     },
     "displayTitle": {
@@ -39,7 +38,6 @@
       "title" : "Contenido",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Corresponde al contenido del bloque",
       "translatable": true
     },
     "instruction": {
@@ -49,7 +47,6 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Instrucciones que se le brindan al usuario con respecto al bloque",
       "translatable": true
     },
     "_classes": {
@@ -59,7 +56,7 @@
       "inputType": "Text",
       "validators": [],
       "title": "Incluir clases",
-      "help": "Se utiliza para diseñar o manipular la apariencia de este bloque. Estos están predefinidos en el tema o en la configuración del curso."
+      "help": "Se utiliza para diseñar o manipular la apariencia de este bloque. Estos están predefinidos en el tema o en la configuración del recurso."
     },
     "_isOptional": {
       "type": "boolean",
@@ -77,7 +74,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Bloque disponible?",
-      "help": "Define si un bloque y su contenido esta disponible o no en el curso."
+      "help": "Define si un bloque y su contenido esta disponible o no en el recurso."
     },
     "_isHidden": {
       "type": "boolean",
@@ -95,7 +92,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Es un bloque visible?",
-      "help": "Oculta el contenido del bloque pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
+      "help": "Oculta el contenido del bloque pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_requireCompletionOf": {
       "type": "number",

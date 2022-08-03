@@ -11,7 +11,6 @@
       "title": "Título",
       "inputType": "Text",
       "validators": ["required"],
-      "help": "Texto que se usa como el identificador del artículo",
       "translatable": true
     },
     "displayTitle": {
@@ -30,7 +29,6 @@
       "inputType": "TextArea",
       "title": "Contenido",
       "validators": [],
-      "help": "Corresponde al contenido del artículo ",
       "translatable": true
     },
     "instruction": {
@@ -40,7 +38,6 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Instrucciones que se le brindan al usuario con respecto al artículo",
       "translatable": true
     },
     "_classes": {
@@ -50,7 +47,7 @@
       "inputType": "Text",
       "validators": [],
       "title": "Incluir clases",
-      "help": "Se utiliza para diseñar o manipular la apariencia de este artículo. Estos están predefinidos en el tema o en la configuración del curso."
+      "help": "Se utiliza para diseñar o manipular la apariencia de este artículo. Estos están predefinidos en el tema o en la configuración del recurso."
     },
     "_isOptional": {
       "type": "boolean",
@@ -68,7 +65,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Artículo disponible?",
-      "help": "Define si un artículo y su contenido esta disponible o no en el curso."
+      "help": "Define si un artículo y su contenido esta disponible o no en el recurso."
     },
     "_isHidden": {
       "type": "boolean",
@@ -86,7 +83,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Es un artículo visible?",
-      "help": "Oculta el contenido del artículo pero aún ocupa su espacio en el curso, es equivalente a aplicar el CSS 'visibility:hidden'."
+      "help": "Oculta el contenido del artículo pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
     },
     "_requireCompletionOf": {
       "type": "number",
