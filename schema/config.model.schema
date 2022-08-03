@@ -107,7 +107,8 @@
               "default": 2,
               "title": "Nivel de ARIA para el elemento de menú de grupo",
               "inputType": "Number",
-              "validators": ["required", "number"]
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de menú de grupo"
             },
             "_menuItem": {
               "type": "number",

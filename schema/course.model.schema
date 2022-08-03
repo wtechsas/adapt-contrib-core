@@ -39,6 +39,7 @@
       "validators": [
         "required"
       ],
+      "help":"Texto que se usa como el identificador del recurso",
       "translatable": true
     },
     "displayTitle": {
@@ -78,6 +79,7 @@
       "required": true,
       "inputType": "TextArea",
       "validators": ["required"],
+      "help": "Corresponde al contenido del recurso",
       "translatable": true
     },
     "instruction": {
@@ -87,6 +89,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
+      "help": "Instrucciones que se le brindan al usuario con respecto al recurso",
       "translatable": true
     },
     "_htmlClasses": {
