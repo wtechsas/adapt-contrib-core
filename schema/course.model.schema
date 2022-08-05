@@ -16,11 +16,11 @@
     "typeCourse": {
       "type": "string",
       "title": "Tipo de recurso",
-      "default": "RED",
+      "default": "RDE",
       "inputType": {
         "type": "Select",
         "options": [
-          "RED",
+          "RDE",
           "Gamificación",
           "Simulación"
         ]
