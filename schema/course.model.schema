@@ -777,7 +777,7 @@
       "default": "",
       "inputType": "CodeEditor:less",
       "validators": [],
-      "title": "Código CSS/LESS personalizado",
+      "title": "Código CSS - LESS personalizado",
       "help": "Agregar cualquier CSS o LESS personalizado"
     },
     "externalReferences": {
