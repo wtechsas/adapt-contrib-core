@@ -351,7 +351,7 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "¿Generar mapas fuente?",
+      "title": "Generar mapas fuente",
       "help": "Permite depurar JavaScript y CSS del recurso a través de las herramientas de desarrollo del navegador."
     },
     "_forceRouteLocking": {
