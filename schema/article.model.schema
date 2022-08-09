@@ -95,7 +95,7 @@
       "inputType": "Number",
       "validators": ["number"],
       "title": "Requerir la finalización de",
-      "help": "El número de bloques dentro de este artículo que el alumno debe completar para que este artículo se establezca como completado. Un valor de -1 requiere que se completen todos."
+      "help": "El número de bloques dentro de este artículo que el estudiante debe completar para que este artículo se establezca como completado. Un valor de -1 requiere que se completen todos."
     },
     "_ariaLevel": {
       "type": "number",

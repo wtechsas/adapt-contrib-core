@@ -81,7 +81,7 @@
         ]
       },
       "title": "¿Restablecer el componente cuando se vuelve a visitar?",
-      "help": "Controla si este componente se restablecerá cuando el alumno abandone la página y vuelva a ella. La configuración 'suave' restablecerá el componente para permitir que el alumno lo intente nuevamente, pero no requerirá que lo haga; mientras que la configuración 'fuerte' requerirá que lo hagan. El valor predeterminado (no) hará que el componente se reinicie.",
+      "help": "Controla si este componente se restablecerá cuando el estudiante abandone la página y vuelva a ella. La configuración 'suave' restablecerá el componente para permitir que el estudiante lo intente nuevamente, pero no requerirá que lo haga; mientras que la configuración 'fuerte' requerirá que lo hagan. El valor predeterminado (no) hará que el componente se reinicie.",
       "validators": []
     },
     "_ariaLevel": {

@@ -709,7 +709,7 @@
       "inputType": "Number",
       "validators": ["number"],
       "title": "Exigir la realización de",
-      "help": "El número de objetos de contenido dentro de este recurso que el alumno debe completar para que este se establezca como completado. Un valor de -1 requiere que se completen todos."
+      "help": "El número de objetos de contenido dentro de este recurso que el estudiante debe completar para que este se establezca como completado. Un valor de -1 requiere que se completen todos."
     },
     "_isSelected": {
       "type": "boolean",
