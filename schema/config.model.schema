@@ -374,6 +374,7 @@
     "_logging": {
       "type": "object",
       "title": "Comportamiento del registro",
+      "help": "Específica las opciones para determinar el tipo y salida de los registros",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -381,13 +382,15 @@
           "required": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "¿Activar?"
+          "title": "¿Activar?",
+          "help": "Activar o desactivar la salida de registros"
         },
         "_level": {
           "type": "string",
           "required": true,
           "default" : "info",
           "title" : "Nivel de registro",
+          "help": "Define el tipo de registro que se muestra",
           "validators": [],
           "inputType": {
             "type": "Select",
@@ -405,14 +408,16 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "¿Permitir registro en la consola del navegador web?"
+          "title": "¿Permitir registro en la consola del navegador web?",
+          "help": "Si se activa, el registro se muestra en la consola del navegador"
         },
         "_warnFirstOnly": {
           "type": "boolean",
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "¿Mostrar solo las primeras advertencias obsoletas y eliminadas?"
+          "title": "¿Mostrar solo las primeras advertencias obsoletas y eliminadas?",
+          "help": "Muestra solo los primeros registros en la consola del navegador"
         }
       }
     },
