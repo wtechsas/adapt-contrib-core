@@ -82,7 +82,7 @@
           "default": "",
           "inputType": "Text",
           "validators": [],
-          "help": "Incluye una descripción de la imagen; requerido cuando se tiene un significado que debe transmitirse al alumno. Para una imagen 'decorativa' deje este espacio en blanco.",
+          "help": "Incluye una descripción de la imagen; requerido cuando se tiene un significado que debe transmitirse al estudiante. Para una imagen 'decorativa' deje este espacio en blanco.",
           "translatable": true
         },
         "src": {
@@ -194,7 +194,7 @@
       "inputType": "Number",
       "validators": ["number"],
       "title": "Requerir la finalización de",
-      "help": "El número de artículos dentro de esta página que el alumno debe completar para que esta página se establezca como completada. Un valor de -1 requiere que se completen todos."
+      "help": "El número de artículos dentro de esta página que el estudiante debe completar para que esta página se establezca como completada. Un valor de -1 requiere que se completen todos."
     },
     "_ariaLevel": {
       "type": "number",
