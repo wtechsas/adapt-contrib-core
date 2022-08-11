@@ -139,7 +139,7 @@
         ]
       },
       "title": "Tipo de bloqueo de menú",
-      "help": "Define qué mecanismo de bloqueo (si lo hay) se utilizará. Para ser utilizado sólo en los submenús.",
+      "help": "Para ser utilizado sólo en los submenús. Para ser utilizado sólo en los submenús. Este establece el orden en que el estudiante ingresa a las páginas de un recurso.  - Bloquear el último: El estudiante puede ingresar a todas las páginas tal como quiera pero menos a la última, se deben completar las anteriores para poder ingresar - Secuencial: Solo aparece habilitada la primera página y hasta completarla se habilitara la siguiente en ese orden.  - Desbloquear el primero : Solo aparece habilitada la primera página, cuando esta se completa se hablitan todas las demás. - Personalizado:  En esta opción el estudiante no tiene ninguna restricción por defecto, a menos que se use la opción 'Bloqueado por' en ajustes de la página",
       "validators": []
     },
     "_classes": {
