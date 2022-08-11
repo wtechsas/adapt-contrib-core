@@ -361,7 +361,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "¿Hacer cumplir el bloqueo de rutas?",
-      "help": "Si el bloqueo está habilitado, esta configuración impide navegar a rutas bloqueadas"
+      "help": "Si el bloqueo está habilitado y se tiene una página con cualquier tipo de bloqueo. El usuario no puede ir a esta, aún si tiene la url."
     },
     "_disableAnimationFor": {
       "type": "array",
