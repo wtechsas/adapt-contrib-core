@@ -46,7 +46,7 @@
     "_defaultLanguage": {
       "type": "string",
       "required": true,
-      "default": "en",
+      "default": "es",
       "title": "Idioma predeterminado",
       "inputType": "Text",
       "validators": ["required"],
