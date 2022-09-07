@@ -137,7 +137,7 @@
       "title": "Contenido",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Corresponde al contenido del componente",
+      "help": "Corresponde al contenido del componente. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir.",
       "translatable": true
     },
     "_onScreen": {

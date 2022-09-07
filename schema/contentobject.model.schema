@@ -41,7 +41,7 @@
       "validators": [],
       "title": "Contenido de la página",
       "translatable": true,
-      "help": "Si se establece, este texto se mostrará en lugar del texto del índice recurso cuando se vea esta página."
+      "help": "Si se establece, este texto se mostrará en lugar del texto del índice recurso cuando se vea esta página. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir."
     },
     "body":{
       "type": "string",
@@ -49,7 +49,7 @@
       "title": "Índice",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Índice que se muestra al inicio de la página",
+      "help": "Índice que se muestra al inicio de la página. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir.",
       "translatable": true
     },
     "instruction": {

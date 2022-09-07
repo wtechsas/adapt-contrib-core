@@ -79,7 +79,7 @@
       "required": true,
       "inputType": "TextArea",
       "validators": ["required"],
-      "help": "Corresponde al contenido del recurso",
+      "help": "Corresponde al contenido del recurso. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir.",
       "translatable": true
     },
     "instruction": {

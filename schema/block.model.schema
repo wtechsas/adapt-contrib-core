@@ -39,7 +39,7 @@
       "title" : "Contenido",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Corresponde al contenido del bloque",
+      "help": "Corresponde al contenido del bloque. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir.",
       "translatable": true
     },
     "instruction": {
