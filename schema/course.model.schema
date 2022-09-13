@@ -196,7 +196,7 @@
             "accessibilityToggleTextOff": {
               "type": "string",
               "title": "Accesibilidad desactivada",
-              "default": "¿Deshabiitar accesibilidad?",
+              "default": "¿Deshabilitar accesibilidad?",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -269,7 +269,7 @@
                 "answeredCorrectly": {
                   "type": "string",
                   "title": "Respuesta correcta",
-                  "default": "Respuesta incorrecta",
+                  "default": "Respuesta correcta",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
