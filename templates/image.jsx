@@ -31,6 +31,11 @@ export default function Image(props) {
         props.classes,
         props.attribution && 'has-attribution'
       ])}
+      style={{
+        margin: "0 auto",
+        minWidth: '0%',
+        maxWidth: props.porcentaje ? `${props.porcentaje}%` : '100%'
+      }}
     >
 
       <img
