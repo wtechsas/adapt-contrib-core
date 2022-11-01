@@ -762,10 +762,10 @@
         "type": "Select",
         "options": [
           {"val":"", "label":""},
-          {"val":"custom", "label":"personalizado"},
-          {"val":"lockLast", "label":"bloquear el último"},
-          {"val":"sequential", "label":"secuencial"},
-          {"val":"unlockFirst", "label":"desbloquear el primero"}
+          {"val":"custom", "label":"Personalizado"},
+          {"val":"lockLast", "label":"Bloquear el último"},
+          {"val":"sequential", "label":"Secuencial"},
+          {"val":"unlockFirst", "label":"Desbloquear el primero"}
         ]
       },
       "title": "Tipo de bloqueo del menú",
